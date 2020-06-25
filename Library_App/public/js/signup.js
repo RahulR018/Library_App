@@ -81,7 +81,7 @@ function fst_validate() {
 }
 function lst_validate() {
     if (LastName.value == "") {
-        LastName.placeholder = "Type your firstname";
+        LastName.placeholder = "Type your lastname";
         return false;
     } else if (namepattern.test(LastName.value)) {
         LastName.value = LastName.value.replace(namepattern, '');
@@ -178,27 +178,32 @@ function email_validate() {
 
 function resetfst(){
     document.querySelector('input#fstName').classList.remove('error');
+    document.querySelector('input#fstName').placeholder="First Name";
 }
 function resetlst(){
     document.querySelector('input#lstName').classList.remove('error');
+    document.querySelector('input#lstName').placeholder="Last Name";
 }
-function resetfst(){
-    document.querySelector('input#fstName').classList.remove('error');
-}
+// function resetfst(){
+//     document.querySelector('input#fstName').classList.remove('error');
+// }
 function resetdob() {
     document.querySelector('input#dob').classList.remove('error');
 }
 function resete() {
     document.querySelector('input#email').classList.remove('error');
+    document.querySelector('input#email').placeholder="Enter Email";
 }
 function resetp() {
     document.querySelector('input#password').classList.remove('error');
+    document.querySelector('input#password').placeholder="Enter Password";
 }
 function resetconfp() {
     document.querySelector('input#confirmpassword').classList.remove('error');
 }
 function resettele() {
     document.querySelector('input#telephone').classList.remove('error');
+    document.querySelector('input#telephone').placeholder="Enter Phone Number";
 }
 
 

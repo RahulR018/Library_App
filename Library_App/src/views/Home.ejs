@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Library</title>
+    <title><%=title%></title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -16,16 +16,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
-    <link rel="stylesheet" href='/public/css/style.css'>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href='/css/style.css'>
     
 </head>
 
 <body>
     <nav class="navbar navbar-expand titleBar py-3">
-        <a class="text-white ml-5" href="#">HOME</a>
+        <!-- <a class="text-white ml-5" href="#">HOME</a>
         <a class="text-white ml-4" href="./login.html">LOGIN</a>
-        <a class="text-white ml-4" href="./signup.html">SIGNUP</a>
+        <a class="text-white ml-4" href="./signup.html">SIGNUP</a> -->
+        <%for(i=0;i<nav.length;i++){%>
+            <a class="text-white ml-5" href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        <%}%>
     </nav>
     <div class="container-fluid titleBar2 py-4">
         <h1 class="display-3 ml-5 text-white pb-5"><strong>Library</strong></h1>
@@ -119,7 +122,7 @@
             <button class="btn googleplus">Google+</button>
         </div>
     </footer>
-    <script src="/public/js/bootstrap.min.js" ></script>
+    <script src="/js/bootstrap.min.js" ></script>
 </body>
 
 </html>
